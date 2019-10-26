@@ -2,4 +2,6 @@
 
 require "./lib/environment"
 
-GreenvilleSchools::CLI.new.call
+#GreenvilleSchools::CLI.new.call
+
+GreenvilleSchools::Scraper.new.pagescrape
