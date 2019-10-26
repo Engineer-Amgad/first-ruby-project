@@ -1,9 +1,9 @@
-require_relative "GreenvileSchools/version"
-require_relative "GreenvileSchools/cli"
+require_relative "GreenvilleSchools/version"
+require_relative "GreenvilleSchools/cli"
 
 #require 'pry'
 
-module GreenvileSchools
+module GreenvilleSchools
     class Error < StandardError; end
     # Your code goes here...
 end
