@@ -4,4 +4,4 @@ require "./lib/environment"
 
 #GreenvilleSchools::CLI.new.call
 
-GreenvilleSchools::Scraper.new.pagescrape
+school = GreenvilleSchools::Scraper.new.pagescrape

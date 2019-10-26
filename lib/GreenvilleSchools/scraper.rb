@@ -1,6 +1,8 @@
 require 'open-uri'
 #require 'pry'
 class GreenvilleSchools::Scraper
+  
+  attr_accessor :name, 
   #url = "https://www.greatschools.org/north-carolina/greenville/schools/?gradeLevels%5B%5D=h&gradeLevels%5B%5D=m&gradeLevels%5B%5D=e"
   
   def pagescrape
@@ -18,13 +20,15 @@ class GreenvilleSchools::Scraper
       scale = school.css(".scale").text
       school_info = {:name => name,
                 :address => address,
-                :school_url => page_url, :scale => scale}
-      schools_array_array << school_info
+                :school_url => school_url, :scale => scale}
+      schools_array << school_info
       puts schools_array
+      puts self.name
       end
     schools_array
     #binding.pry
-    #puts schools_array
+    puts schools_array
+    puts "I am here"
   end
   
 end 
