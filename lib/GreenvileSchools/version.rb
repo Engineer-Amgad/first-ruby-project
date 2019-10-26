@@ -1,5 +1,3 @@
-module Greenvile
-  module Schools
+module GreenvilleSchools
     VERSION = "0.1.0"
-  end
 end
