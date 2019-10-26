@@ -1,3 +1,4 @@
+require 'open-uri'
 #require 'pry'
 class GreenvilleSchools::Scraper
   #url = "https://www.greatschools.org/north-carolina/greenville/schools/?gradeLevels%5B%5D=h&gradeLevels%5B%5D=m&gradeLevels%5B%5D=e"
@@ -13,15 +14,17 @@ class GreenvilleSchools::Scraper
     schools_list.css("li.unsaved").each do |school|
       name = school.css(".name").text
       address = school.css(".address").text
-      page_url = school.css("a").attribute("href").value
+      school_url = school.css("a").attribute("href").value
       scale = school.css(".scale").text
       school_info = {:name => name,
-                :location => address,
-                :profile_url => page_url, :scale => scale}
-      students_array << school_info
+                :address => address,
+                :school_url => page_url, :scale => scale}
+      schools_array_array << school_info
+      puts schools_array
       end
     schools_array
-    binding.pry
+    #binding.pry
+    #puts schools_array
   end
   
 end 
